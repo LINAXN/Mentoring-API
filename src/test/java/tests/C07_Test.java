@@ -36,7 +36,7 @@ public class C07_Test extends TodoUrl {
 
         Response response =  RestAssured.given(spec).get("/todos");
 
-        // response.prettyPrint();
+         response.prettyPrint();
 
         JsonPath jsonPath = response.jsonPath();
 
@@ -47,6 +47,8 @@ public class C07_Test extends TodoUrl {
         System.out.println(jsonPath.getList("findAll{it.userId<5}.userId"));
 
         assertTrue(jsonPath.getBoolean("any{it.title.contains('quis eius est sint explicabo')}"));
+        int listname = jsonPath.getList("findAll{it.title=='quis eius est sint explicabo'}").size();
+
 
 
 
