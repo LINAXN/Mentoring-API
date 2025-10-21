@@ -15,7 +15,7 @@ public class PetStoreUrl {
     public void setSpec() {
 //        apiKey.put("api_key","2eeebe74d17da380e718f9066997a62a");
         spec = new RequestSpecBuilder()
-                .setBaseUri("https://petstore.swagger.io/v2")
+                .setBaseUri("https://petstore.swagger.io")
 //                .addQueryParam("status", "sold")
 //                .queryParams("api_key","2eeebe74d17da380e718f9066997a62a");
                 .build();
